@@ -13,5 +13,5 @@ npm run build   # production build in dist/
 
 ## Add your content
 
-All of the text lives in `src/content.js`. Replace the `[bracketed]` placeholders there.
-Put your résumé and ethics paper PDFs in the `public/` folder as `resume.pdf` and `ethics-paper.pdf`.
+All of the text lives in `src/content.js`.
+PDFs and project images go in the `public/` folder and are linked from `content.js` as `/file-name`.
