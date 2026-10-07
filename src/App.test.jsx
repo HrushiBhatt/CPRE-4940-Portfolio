@@ -2,7 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, it, expect } from 'vitest';
 import App from './App';
 
-const sections = ['Career Objective', 'Senior Design Project', 'Projects', 'Internships', 'Résumé', 'Reflections'];
+const sections = ['Career Objective', 'Senior Design Project', 'Projects', 'Internships & Experience', 'Résumé', 'Reflections'];
 const papers = ['General Education Reflection', 'Cumulative Reflection', 'Ethics Paper'];
 
 describe('App', () => {

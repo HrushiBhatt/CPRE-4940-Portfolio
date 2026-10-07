@@ -1,3 +1,5 @@
+import { asset } from '../asset';
+
 export function Field({ label, children }) {
   return (
     <div className="field">
@@ -19,7 +21,7 @@ export function Tags({ items }) {
 export function DocLink({ href, children }) {
   if (!href) return <span className="button is-disabled">PDF coming soon</span>;
   return (
-    <a className="button" href={href} target="_blank" rel="noreferrer">
+    <a className="button" href={asset(href)} target="_blank" rel="noreferrer">
       {children}
     </a>
   );
@@ -31,7 +33,7 @@ export default function ProjectCard({ project, index = 0 }) {
   return (
     <article className="card project reveal" style={{ '--delay': `${index * 120}ms` }}>
       <div className={imageFit === 'contain' ? 'project-image project-image--contain' : 'project-image'}>
-        <img src={image} alt={title} loading="lazy" style={{ objectPosition: imagePosition }} />
+        <img src={asset(image)} alt={title} loading="lazy" style={{ objectPosition: imagePosition }} />
       </div>
       <div className="project-body">
         <h3 className="card-title">{title}</h3>

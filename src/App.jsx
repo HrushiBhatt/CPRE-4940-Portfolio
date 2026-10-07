@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Section from './components/Section';
 import ProjectCard, { DocLink, Field, Tags } from './components/ProjectCard';
+import { asset } from './asset';
 import {
   profile,
   careerObjective,
@@ -87,7 +88,7 @@ export default function App() {
                     {seniorDesign.links.map((link) => (
                       <li key={link.label}>
                         {link.href ? (
-                          <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                          <a href={asset(link.href)} target="_blank" rel="noreferrer">{link.label}</a>
                         ) : (
                           <span className="pending">{link.label} (coming soon)</span>
                         )}
@@ -106,7 +107,7 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="internships" number="04" title="Internships" cream>
+        <Section id="internships" number="04" title="Internships & Experience" cream>
           <div className="stack">
             {internships.map((job, i) => (
               <article key={job.position} className="card card--padded reveal" style={delay(i)}>
@@ -138,9 +139,8 @@ export default function App() {
             <DocLink href={resume.pdf}>View Résumé (PDF)</DocLink>
           </div>
           <div className="grid resume-grid">
-            <EntryList title="Research & Published Papers" items={resume.research} index={0} />
-            <EntryList title="Awards" items={resume.awards} index={1} />
-            <EntryList title="Activities" items={resume.activities} index={2} />
+            <EntryList title="Awards" items={resume.awards} index={0} />
+            <EntryList title="Activities" items={resume.activities} index={1} />
           </div>
         </Section>
 
